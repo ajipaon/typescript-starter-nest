@@ -1,0 +1,6 @@
+.dockerignore
+dist
+test
+node_modules
+README.md
+.env
