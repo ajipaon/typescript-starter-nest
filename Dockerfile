@@ -1,13 +1,14 @@
-FROM node:14-alpine
+FROM node:21-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY package*.json ./
 
-# Install dependencies
 RUN npm install
 
 COPY . .
+
+RUN npm run build
 
 EXPOSE 3000
 
